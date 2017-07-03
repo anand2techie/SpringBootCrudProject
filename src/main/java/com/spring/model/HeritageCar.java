@@ -1,5 +1,9 @@
 package com.spring.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.swagger.annotations.ApiModelProperty;
+
 public class HeritageCar {
     private String id;
     private String variants;
@@ -21,6 +25,8 @@ public class HeritageCar {
         this.id = id;
     }
 
+    @JsonProperty(required = true)
+    @ApiModelProperty(notes = "The name of the user", required = true)
     public String getVariants() {
         return variants;
     }
